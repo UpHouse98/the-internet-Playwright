@@ -21,15 +21,58 @@ export class BasePage {
     this.dragAndDrop = page.locator("li a", { hasText: "Drag and Drop" });
     this.dropdown = page.locator("li a", { hasText: "Dropdown" });
     this.dynamicContent = page.locator("li a", { hasText: "Dynamic Content" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
-    this.basicAuth = page.locator("li a", { hasText: "Basic Auth" });
+    this.dynamicControls = page.locator("li a", {
+      hasText: "Dynamic Controls",
+    });
+    this.dynamicLoadind = page.locator("li a", { hasText: "Dynamic Loading" });
+    this.entryAdd = page.locator("li a", { hasText: "Entry Ad" });
+    this.exitIntent = page.locator("li a", { hasText: "Exit Intent" });
+    this.fileDownload = page.locator("li a", { hasText: "File Download" });
+    this.fileUpload = page.locator("li a", { hasText: "File Upload" });
+    this.floatingMenu = page.locator("li a", { hasText: "Floating Menu" });
+    this.forgorPassword = page.locator("li a", { hasText: "Forgot Password" });
+    this.formAuth = page.locator("li a", { hasText: "Form Authentication" });
+    this.frames = page.locator("li a", { hasText: "Frames" });
+    this.geolocation = page.locator("li a", { hasText: "Geolocation" });
+    this.horizontalSlider = page.locator("li a", {
+      hasText: "Horizontal Slider",
+    });
+    this.hovers = page.locator("li a", { hasText: "Hovers" });
+    this.infiniteScroll = page.locator("li a", { hasText: "Infinite Scroll" });
+    this.inputs = page.locator("li a", { hasText: "Inputs" });
+    this.jqueryMenus = page.locator("li a", { hasText: "JQuery UI Menus" });
+    this.jsAlerts = page.locator("li a", { hasText: "JavaScript Alerts" });
+    this.jsOnloadEventErr = page.locator("li a", {
+      hasText: "JavaScript onload event error",
+    });
+    this.keyPresses = page.locator("li a", { hasText: "Key Presses" });
+    this.largeAndDeepDOM = page.locator("li a", {
+      hasText: "Large & Deep DOM",
+    });
+    this.multiWindows = page.locator("li a", { hasText: "Multiple Windows" });
+    this.nestedFrames = page.locator("li a", { hasText: "Nested Frames" });
+    this.notifMsgs = page.locator("li a", { hasText: "Notification Messages" });
+    this.redirectLink = page.locator("li a", { hasText: "Redirect Link" });
+    this.secureFileDownload = page.locator("li a", {
+      hasText: "Secure File Download",
+    });
+    this.shadowDOM = page.locator("li a", { hasText: "Shadow DOM" });
+    this.shiftingContent = page.locator("li a", {
+      hasText: "Shifting Content",
+    });
+    this.slowResources = page.locator("li a", { hasText: "Slow Resources" });
+    this.sortDataTables = page.locator("li a", {
+      hasText: "Sortable Data Tables",
+    });
+    this.statusCodes = page.locator("li a", { hasText: "Status Codes" });
+    this.typos = page.locator("li a", { hasText: "Typos" });
+    this.editor = page.locator("li a", { hasText: "WYSIWYG Editor" });
+  }
+
+  async isElementVisible(...locators) {
+    for (let locator of locators) {
+      await expect(locator).toBeVisible();
+    }
   }
 
   async loadPage(url) {
@@ -41,46 +84,3 @@ export class BasePage {
     await expect(this.page).toHaveURL(/abtest/);
   }
 }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// Dynamic Controls
-// Dynamic Loading
-// Entry Ad
-// Exit Intent
-// File Download
-// File Upload
-// Floating Menu
-// Forgot Password
-// Form Authentication
-// Frames
-// Geolocation
-// Horizontal Slider
-// Hovers
-// Infinite Scroll
-// Inputs
-// JQuery UI Menus
-// JavaScript Alerts
-// JavaScript onload event error
-// Key Presses
-// Large & Deep DOM
-// Multiple Windows
-// Nested Frames
-// Notification Messages
-// Redirect Link
-// Secure File Download
-// Shadow DOM
-// Shifting Content
-// Slow Resources
-// Sortable Data Tables
-// Status Codes
-// Typos
-// WYSIWYG Editor
