@@ -15,7 +15,7 @@ export class BasePage {
     this.digestAuth = page.locator("li a", {
       hasText: "Digest Authentication",
     });
-    this.DisapElements = page.locator("li a", {
+    this.disapElements = page.locator("li a", {
       hasText: "Disappearing Elements",
     });
     this.dragAndDrop = page.locator("li a", { hasText: "Drag and Drop" });
@@ -79,8 +79,16 @@ export class BasePage {
     await this.page.goto(url);
   }
 
+  async navigateToSection(locator) {
+    await this.isElementVisible(locator);
+    await locator.click();
+  }
+
   async navigateToABTesting() {
-    await this.ABTesting.click();
-    await expect(this.page).toHaveURL(/abtest/);
+    await this.navigateToSection(this.ABTesting);
+  }
+
+  async navigateToAddRemoveElem() {
+    await this.navigateToSection(this.addRemoveElements);
   }
 }
