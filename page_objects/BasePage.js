@@ -91,4 +91,8 @@ export class BasePage {
   async navigateToAddRemoveElem() {
     await this.navigateToSection(this.addRemoveElements);
   }
+
+  async navigateToBasicAuth() {
+    await this.navigateToSection(this.basicAuth);
+  }
 }

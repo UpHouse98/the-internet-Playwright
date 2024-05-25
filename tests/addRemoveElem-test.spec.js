@@ -18,7 +18,7 @@ test.describe("Add/Remove Element Page", () => {
     await addRemoveElemPage.deleteElement();
   });
 
-  test.only("Add/Remove multimple elements", async () => {
+  test("Add/Remove multimple elements", async () => {
     let numberOfElements = 5;
     await addRemoveElemPage.addMultipleElements(numberOfElements);
     await addRemoveElemPage.checkDeletedElements(numberOfElements);
