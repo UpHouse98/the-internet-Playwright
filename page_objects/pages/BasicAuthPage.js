@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
-import { BasePage } from "./BasePage";
+import { BasePage } from "../BasePage.js";
 
-export class BasicAuth extends BasePage {
+export class BasicAuthPage extends BasePage {
   constructor(page) {
     super(page);
   }

@@ -1,13 +1,7 @@
-import { test } from "@playwright/test";
-import { BasePage } from "../page_objects/BasePage";
-import { BasicAuth } from "../page_objects/3-BasicAuth";
+import { test } from "../page_objects/fixtures";
 
-let basePage, basicAuth;
-
-test.only("Basic Auth - Test", async ({ page }) => {
-  basePage = new BasePage(page);
-  basicAuth = new BasicAuth(page);
+test("Basic Auth - Test", async ({ basePage, basicAuthPage }) => {
   await basePage.loadPage("/");
   await basePage.navigateToBasicAuth();
-  await basicAuth.isDialogVisible();
+  await basicAuthPage.isDialogVisible();
 });
