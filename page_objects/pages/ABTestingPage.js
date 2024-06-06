@@ -1,11 +1,11 @@
-import { expect } from "@playwright/test";
-import { BasePage } from "../BasePage.js";
+import { expect } from '@playwright/test';
+import { BasePage } from '../BasePage.js';
 
 export class ABTestingPage extends BasePage {
   constructor(page) {
     super(page);
-    this.heading = page.locator("h3");
-    this.description = page.locator("");
+    this.heading = page.locator('h3');
+    this.description = page.locator('');
   }
 
   async isABTestingPageOpened() {

@@ -1,9 +1,9 @@
-import { test as base } from "@playwright/test";
+import { test as base } from '@playwright/test';
 
-import { BasePage } from "./BasePage";
-import { ABTestingPage } from "../page_objects/pages/ABTestingPage";
-import { AddRemoveElemPage } from "../page_objects/pages/AddRemovePage";
-import { BasicAuthPage } from "../page_objects/pages/BasicAuthPage";
+import { BasePage } from './BasePage';
+import { ABTestingPage } from '../page_objects/pages/ABTestingPage';
+import { AddRemoveElemPage } from '../page_objects/pages/AddRemovePage';
+import { BasicAuthPage } from '../page_objects/pages/BasicAuthPage';
 
 export const test = base.test.extend({
   basePage: async ({ page }, use) => {

@@ -1,12 +1,12 @@
-import { expect } from "@playwright/test";
-import { BasePage } from "../BasePage.js";
+import { expect } from '@playwright/test';
+import { BasePage } from '../BasePage.js';
 
 export class AddRemoveElemPage extends BasePage {
   constructor(page) {
     super(page);
-    this.heading = page.locator("h3");
-    this.addElemButton = page.locator("button", { hasText: "Add Element" });
-    this.deleteButton = page.locator("button", { hasText: "Delete" });
+    this.heading = page.locator('h3');
+    this.addElemButton = page.locator('button', { hasText: 'Add Element' });
+    this.deleteButton = page.locator('button', { hasText: 'Delete' });
   }
 
   async isAddRemoveElemPageOpened() {

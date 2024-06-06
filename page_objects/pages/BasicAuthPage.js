@@ -1,5 +1,5 @@
-import { expect } from "@playwright/test";
-import { BasePage } from "../BasePage.js";
+import { expect } from '@playwright/test';
+import { BasePage } from '../BasePage.js';
 
 export class BasicAuthPage extends BasePage {
   constructor(page) {
@@ -7,6 +7,6 @@ export class BasicAuthPage extends BasePage {
   }
 
   async isDialogVisible() {
-    await this.page.on("dialog", (dialog) => dialog.accept());
+    await this.page.on('dialog', (dialog) => dialog.accept());
   }
 }
